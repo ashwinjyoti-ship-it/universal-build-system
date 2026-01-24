@@ -1,0 +1,16 @@
+{
+  "name": "universal-build-system",
+  "version": "1.0.0",
+  "description": "Build any app from any device with Claude",
+  "scripts": {
+    "dev": "./preview",
+    "deploy": "./deploy",
+    "setup": "./setup.sh"
+  },
+  "keywords": ["cloudflare", "deployment", "automation", "claude"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.22.1"
+  }
+}
