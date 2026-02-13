@@ -1,0 +1,187 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-02-13",
+  "organization": "ashwinjyoti-ship-it",
+  "cloudflare": {
+    "accountId": "cf39f049784caf415803b1a54fea336c"
+  },
+  "domains": [
+    {
+      "name": "aishwin.net",
+      "provider": "cloudflare",
+      "status": "active"
+    },
+    {
+      "name": "theprolificpoppin.com",
+      "provider": "cloudflare",
+      "status": "active"
+    }
+  ],
+  "databases": [
+    {
+      "name": "theprolificpoppin-db",
+      "id": "c1d8401c-c081-47ac-bf09-dbf29ca1e155",
+      "provider": "cloudflare-d1",
+      "size": "N/A",
+      "notes": "Essay library",
+      "status": "active"
+    },
+    {
+      "name": "ncpa-sound-crew-db",
+      "id": "TBD",
+      "provider": "cloudflare-d1",
+      "size": "1.4 MB",
+      "notes": "Crew scheduling (most active)",
+      "status": "active"
+    },
+    {
+      "name": "ncpa-crew-db",
+      "id": "TBD",
+      "provider": "cloudflare-d1",
+      "size": "512 KB",
+      "notes": "",
+      "status": "active"
+    },
+    {
+      "name": "ncpatech-db",
+      "id": "TBD",
+      "provider": "cloudflare-d1",
+      "size": "192 KB",
+      "notes": "",
+      "status": "active"
+    },
+    {
+      "name": "ncpa-events-db",
+      "id": "TBD",
+      "provider": "cloudflare-d1",
+      "size": "65 KB",
+      "notes": "",
+      "status": "active"
+    },
+    {
+      "name": "ncpa-notes",
+      "id": "TBD",
+      "provider": "cloudflare-d1",
+      "size": "24 KB",
+      "notes": "",
+      "status": "active"
+    },
+    {
+      "name": "theprolificpoppin-production",
+      "id": "TBD",
+      "provider": "cloudflare-d1",
+      "size": "389 KB",
+      "notes": "",
+      "status": "active"
+    },
+    {
+      "name": "silentledger-db",
+      "id": "TBD",
+      "provider": "cloudflare-d1",
+      "size": "49 KB",
+      "notes": "",
+      "status": "active"
+    },
+    {
+      "name": "quotecreator-production",
+      "id": "TBD",
+      "provider": "cloudflare-d1",
+      "size": "32 KB",
+      "notes": "",
+      "status": "active"
+    }
+  ],
+  "projects": [
+    {
+      "name": "theprolificpoppin",
+      "displayName": "The Prolific Poppin",
+      "repository": "ashwinjyoti-ship-it/theprolificpoppin",
+      "domain": "theprolificpoppin.com",
+      "deployments": {
+        "testing": {
+          "platform": "vercel",
+          "url": "https://theprolificpoppin.vercel.app",
+          "status": "active"
+        },
+        "production": {
+          "platform": "cloudflare-pages",
+          "url": "TBD",
+          "status": "pending"
+        }
+      },
+      "stack": {
+        "framework": "Next.js 14",
+        "styling": "Tailwind CSS",
+        "storage": "localStorage (D1 integration pending)"
+      },
+      "databases": [
+        "theprolificpoppin-db",
+        "theprolificpoppin-production"
+      ],
+      "features": [
+        "Homepage",
+        "Essays Archive",
+        "About Page",
+        "Author Page",
+        "Admin Panel with Featured Essay Picker",
+        "Dark/Light Mode",
+        "Mobile Responsive with Horizontal Scroll Categories"
+      ],
+      "design": {
+        "theme": "Dark (#0a0a0a)",
+        "accent": "Gold (#c9a96e)",
+        "typography": {
+          "headings": "Serif",
+          "labels": "Monospace"
+        }
+      },
+      "categories": [
+        "The Ache",
+        "The Unraveling",
+        "The Experiment",
+        "The Opening"
+      ],
+      "storageKeys": [
+        "tpp_essays_v3",
+        "tpp_featured_ids",
+        "tpp_theme"
+      ],
+      "pending": [
+        "Wire admin to D1",
+        "Deploy to Cloudflare Pages (production domain)",
+        "Environment-based admin auth"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "universal-build-system",
+      "displayName": "Universal Build System",
+      "repository": "ashwinjyoti-ship-it/universal-build-system",
+      "description": "Build any app from any device with Claude - Automated deployment and database control center",
+      "deployments": {
+        "production": {
+          "platform": "github",
+          "url": "https://github.com/ashwinjyoti-ship-it/universal-build-system",
+          "status": "active"
+        }
+      },
+      "features": [
+        "Project Registry (projects.json)",
+        "D1 Database Manager (GitHub Actions)",
+        "Secret Sync Across Ecosystem",
+        "Automated Deployment Triggers",
+        "Mobile-First Control Center"
+      ],
+      "status": "active"
+    }
+  ],
+  "secrets": {
+    "required": [
+      "GH_PAT",
+      "CLOUDFLARE_API_TOKEN",
+      "CLOUDFLARE_ACCOUNT_ID",
+      "VERCEL_TOKEN"
+    ],
+    "notes": "Secrets should be synced across all repositories in the ecosystem"
+  }
+}
